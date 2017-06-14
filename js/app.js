@@ -8,6 +8,7 @@ var $tasksList = $("#tasks-list");
 var cargarPagina = function () {
   cargarTareas();
   $("#add-form").submit(agregarTarea);
+  eliminarFila(); 
 };
 
 var cargarTareas = function () {
@@ -52,9 +53,22 @@ var agregarTarea = function (e) {
 
 var plantillaBotones =  '<button><span class="glyphicon glyphicon-zoom-in"></span></button>' +
           '<button><span class="glyphicon glyphicon-pencil"></span></button>' +
-          '<button><span class="glyphicon glyphicon-remove-circle"></span></button>'; 
+          '<button class="borrar"><span class="glyphicon glyphicon-remove-circle"></span></button>'; 
 
 
+
+ 
+   // sección botones 
+  
+  // eliminar fila
+
+  var eliminarFila = function () {
+      $(document).on("click", ".borrar", function (e) {
+          e.preventDefault(); 
+          $(this).closest("tr").remove();  
+      }); 
+  }
+   
 
 
 $(document).ready(cargarPagina);
