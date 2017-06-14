@@ -21,9 +21,9 @@
     <tbody id="tasks-list">
       <tr>
         <td>Nombre tarea</td>
-        <td>estado tarea</td>
+        <td>Estado tarea</td>
         <td>
-          <button><span class="glyphicon glyphicon-zoom-in"></span></button>
+          <button data-toggle="modal" data-target=".bs-example-modal-sm"><span class="glyphicon glyphicon-zoom-in"></span></button>
           <button><span class="glyphicon glyphicon-pencil"></span></button>
          <button><span class="glyphicon glyphicon-remove-circle"></span></button>
         </td>
@@ -54,6 +54,20 @@
     </div>
   </div>
   
+  
+  <!-- Modal Botón Mostrar -->
+
+    <div class="modal fade bs-example-modal-sm"   tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel">
+      <div class="modal-dialog modal-sm" role="document">
+        <div class="modal-content" id="inf-adicional">
+          <h4>Nombre: <p id="nombreTexto"></p></h4>
+          <h4>Id:<p id="textoId"></p></h4>
+          <h4>Creado el: <p id="creado"></p></h4>
+          <h4>Status: <p id="status"></p></h4>
+        </div>
+      </div>
+    </div>
+    
   <script src="http://code.jquery.com/jquery-3.2.1.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   <script src="js/app.js"></script>
