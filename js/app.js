@@ -66,14 +66,19 @@ var plantillaBotones =  '<button data-toggle="modal" data-target=".bs-example-mo
 
   // mostrar detalles
  var mostrarDetalles = function () {
-     var informacion = $(this).closest("tr").data("id"); 
-    
-  $.getJSON(api.url + informacion , function (textos) {
-      var nombre = textos.name;
-      var estado = textos.status[0];
-      var id = textos._id; 
-      var creacion = textos.created_at; 
+     
+     $(document).on("click", ".boton-mostrar", function () {
+         var informacion = $(this).closest("tr").data("id");  
+         $.getJSON(api.url + informacion , function (textos) {
+          var nombre = textos.name;
+         console.log(nombre);
+          var estado = textos.status[0];
+          var id = textos._id; 
+          var creacion = textos.created_at; 
   });
+      }); 
+    
+  
 //    $("#inf-adicional").text("id:" + creado);
  }
  
