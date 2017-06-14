@@ -71,15 +71,18 @@ var plantillaBotones =  '<button data-toggle="modal" data-target=".bs-example-mo
          var informacion = $(this).closest("tr").data("id");  
          $.getJSON(api.url + informacion , function (textos) {
           var nombre = textos.name;
-         console.log(nombre);
+          $("#nombreTexto").text("Nombre: "+nombre);
+          
           var estado = textos.status[0];
+          $("#status").text("Estado: "+estado);
+             
           var id = textos._id; 
+          $("#textoId").text("Id: "+id);
+             
           var creacion = textos.created_at; 
-  });
-      }); 
-    
-  
-//    $("#inf-adicional").text("id:" + creado);
+          $("#creado").text("Creado el: "+creacion);  
+      });
+   });
  }
  
  
