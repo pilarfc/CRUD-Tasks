@@ -73,7 +73,7 @@ var plantillaBotones =  '<button data-toggle="modal" data-target=".bs-example-mo
           var nombre = textos.name;
           $("#nombreTexto").text("Nombre: "+nombre);
           
-          var estado = textos.status[0];
+          var estado = textos.status;
           $("#status").text("Estado: "+estado);
              
           var id = textos._id; 
